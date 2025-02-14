@@ -2,13 +2,10 @@ import gpytoolbox as gpy
 import polyscope as ps
 
 # Load the mesh
-# Use a raw string (prefix 'r') or double backslashes to avoid escape sequence warnings
 V, F = gpy.read_mesh(r"simple_mesh_simplifier\data\penguin.obj")
 
 # Initialize polyscope
 ps.init()
-
-# Register the original mesh
 ps_mesh = ps.register_surface_mesh("Original Mesh", V, F)
 
 # Show the original mesh
